@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+body, html {
+    height: 100%;
+}
+
+.mobile, input, label, .m {
+    display: none;
+}
+
+.sections {
+    float: left;
+    width: 100%;
+}
+
+/* <---------- MENU x BAR ----------> */
+
+.smenu {
+    width: 100%;
+    background-color: black;
+    height: 40px;
+}
+
+.smenu h2 {
+    float: left;
+    position: relative;
+    top: 5px;
+    left: 30px;
+}
+.smenu h2 a {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 200;
+    color: white;
+    text-decoration: none;
+}
+
+.submenu, .cat {
+    position: relative;
+    z-index: 1;
+    float: right;
+    list-style-type: none;
+    background-color: #E91E63;
+}
+
+.submenu li, .cat li {
+    display: block;
+    float: left;
+}
+
+.submenu li a {
+    text-decoration: none;
+    text-align: center;
+    padding: 10.5px 15px;
+    display: block;
+    color: white;
+    letter-spacing: 4px;
+}
+
+.submenu li ul {
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    border-width: 0 1px 1px 1px;
+    border-color: black;
+    border-style: solid;
+    width: 600px;
+}
+
+.submenu li ul li {
+    width: 200px;
+}
+
+.submenu li ul a {
+    padding: 20px 0;
+}
+
+.submenu li:hover ul {
+    display: block;
+    background-color: #F5207D;
+    color: white;
+}
+
+.submenu li a:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s ease;
+}
+
+.submenu li.active a {
+    background-color: #000;
+    color: #fff;
+}
+
+/* <---------- E-N-D ----------> */
+
+
+/* ARTICLE SECTION */
+
+.article {
+    height: auto;
+    width: 90%;
+    position: relative;
+    margin: 50px auto;
+    background-color: white;
+    color: black;
+    border-bottom: 1px solid #E4BB97;
+}
+
+.article h1 {
+    color: #41292C;
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 50px;
+}
+
+.article span {
+    float: right;
+    margin: 10px 50px;
+}
+
+.article h3 {
+    color: #E4BB97;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 10px 0;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.article p {
+    color: black;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 0;
+}
+
+.article .fl::first-letter {
+    font-size: 40px;
+    font-family: serif;
+    font-weight: lighter;
+}
+
+.article img {
+    float: right;
+    margin-left: 50px;
+}
+
+.article .au {
+    width: 50%;
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+}
+
+.q p {
+    width: 100%;
+    text-align: center;
+    height: auto;
+    background-color: lightgrey;
+}
+
+.article .ad {
+    float: initial;
+    margin: 0;
+}
+
+
+/* CONTACT SECTION */
+
+.contact {
+    height: 200px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.contact h4 {
+    padding-top: 50px;
+    font-size: 40px;
+}
+
+.contact p {
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+
+/* < MOBILE RESPONSIVE > */
+
+@media screen and (max-width:720px) {
+
+label, .mobile, .m {
+    display: initial;
+}
+
+input, .submenu, .cat, .d {
+    display: none;
+}
+
+/* MENU BAR */
+
+.smenu h2 { 
+    width: 100%;
+    left: 0;
+    text-align: center;
+    font-size: 22px;
+}
+
+.smenu h2 a {
+    padding: 3px;
+}
+
+.mb {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bar {
+    background-color: black;
+    margin: 3px 10px;
+    padding: 1px 5px;
+}
+
+.bar div {
+    width: 25px;
+    height: 2px;
+    background-color: #FC4F7E;
+    margin: 6px 0;
+    float: initial;
+}
+
+.cat {
+    width: 100%;
+}
+
+.cat li {
+    width: 50%;
+}
+
+.cat li a {
+    text-decoration: none;
+    text-align: center;
+    padding: 20px 11px;
+    display: block;
+    color: white;
+    letter-spacing: 2px;
+}
+
+#check01:checked~.cat {
+    display: block;
+    position: absolute;
+    top: 40px;
+    background-color: #F5207D;
+    color: white;
+}
+
+.cat li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.cat li.active a {
+    background-color: white;
+    color: black;
+}
+
+/* <---------- E-N-D ----------> */
+
+/* ARTICLE SECTION */
+
+.article {
+    margin: 20px auto;
+}
+
+.article h1 {
+    font-size: 16px;
+    margin-top: 40px; 
+}
+
+.article span {
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.article h3 {
+    margin-top: 80px;
+    margin-bottom: 30px;
+    font-size: 27px;
+    width: 100%;
+    text-align: center;
+}
+
+.article p {
+    line-height: 30px;
+    font-size: 15px;
+    padding: 10px 0;
+}
+
+.article fl::first-letter {
+    font-size: 30px;
+}
+
+.article img {
+    width: 80%;
+    float: initial;
+    margin: 0;
+}
+
+.article .au {
+    width: 95%;
+    float: initial;
+    margin: 0;
+}
+
+.im {
+    width: 100%;
+    text-align: center;
+}
+
+/* CONTACT SECTION */
+
+.contact {
+    height: 120px;
+}
+
+.contact h4 {
+    padding-top: 25px;
+    font-size: 22px;
+}
+
+.contact p {
+    padding-top: 8px;
+    font-size: 15px;
+}
+
+}

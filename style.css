@@ -1,0 +1,393 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+body, html {
+    height: 100%;
+}
+
+div {
+    float: left;
+    width: 100%;
+}
+
+.parallax {
+    height: 100%;
+}
+
+.mobile, input, hr, label {
+    display: none;
+}
+
+/* <---------- MENU x BAR ----------> */
+
+.smenu {
+    width: 100%;
+    background-color: black;
+    height: 40px;
+}
+
+.smenu h2 {
+    float: left;
+    position: relative;
+    top: 5px;
+    left: 30px;
+}
+.smenu h2 a {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 200;
+    color: white;
+    text-decoration: none;
+}
+
+.submenu, .cat {
+    position: relative;
+    z-index: 1;
+    float: right;
+    list-style-type: none;
+    background-color: #E91E63;
+}
+
+.submenu li, .cat li {
+    display: block;
+    float: left;
+}
+
+.submenu li a {
+    text-decoration: none;
+    text-align: center;
+    padding: 10.5px 15px;
+    display: block;
+    color: white;
+    letter-spacing: 4px;
+}
+
+.submenu li ul {
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    border-width: 0 1px 1px 1px;
+    border-color: black;
+    border-style: solid;
+    width: 600px;
+}
+
+.submenu li ul li {
+    width: 200px;
+}
+
+.submenu li ul a {
+    padding: 20px 0;
+}
+
+.submenu li:hover ul {
+    display: block;
+    background-color: #F5207D;
+    color: white;
+}
+
+.submenu li a:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s ease;
+}
+
+.submenu li.active a {
+    background-color: #000;
+    color: #fff;
+}
+
+/* <---------- E-N-D ----------> */
+
+
+/* WELCOME SECTION */
+
+.fixed {
+  height: 700px;
+
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("IMG/bg1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #47BAF1;
+}
+
+.fixed h1 {
+  position: relative;
+  top: 20%;
+  text-align: center;
+  font-size: 70px;
+  color: #fff;
+}
+
+.fixed p {
+  position: relative;
+  top: 30%;
+  text-align: center;
+  font-size: 20px;
+  color: #F5F5F5;
+  width: 60%;
+  margin: 0 auto;
+  opacity: 0.7;
+}
+
+/* ARTICLE SECTION */
+
+.swhite {
+    height: auto;
+    margin-bottom: 60px;
+    background-color: white;
+    color: black;
+}
+
+.swhite h3 {
+    color: #41292C;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    top: 40px;
+    margin: 50px 20px;
+}
+
+#list {  
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+#list li {
+    border-bottom: 1px solid #E4BB97;
+    list-style: none;
+    margin: 20px;
+    width: 400px;
+    list-style-type: none;
+    float: left;
+}
+
+#list h6 {
+    color: #E4BB97;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#list img {
+    float: right;
+    margin-left: 50px;
+}
+
+#list p {
+    color: #444444;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 0;
+}
+
+#list a {
+    outline: none;
+    border: none;
+}
+
+
+/* CONTACT SECTION */
+
+.contact {
+    height: 200px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.contact h4 {
+    padding-top: 50px;
+    font-size: 40px;
+}
+
+.contact p {
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+
+
+
+/* < MOBILE RESPONSIVE > */
+
+@media screen and (max-width:720px) {
+
+label, .mobile, .m {
+    display: initial;
+}
+
+input, .submenu, .cat, .d {
+    display: none;
+}
+
+/* MENU BAR */
+
+.smenu h2 { 
+    width: 100%;
+    left: 0;
+    text-align: center;
+    font-size: 22px;
+}
+
+.smenu h2 a {
+    padding: 3px;
+}
+
+.mb {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bar {
+    background-color: black;
+    margin: 3px 10px;
+    padding: 1px 5px;
+}
+
+.bar div {
+    float: initial;
+    width: 25px;
+    height: 2px;
+    background-color: #FC4F7E;
+    margin: 6px 0;
+}
+
+.cat {
+    width: 100%;
+}
+
+.cat li {
+    width: 50%;
+}
+
+.cat li a {
+    text-decoration: none;
+    text-align: center;
+    padding: 20px 11px;
+    display: block;
+    color: white;
+    letter-spacing: 2px;
+}
+
+#check01:checked~.cat {
+    display: block;
+    position: absolute;
+    top: 40px;
+    background-color: #F5207D;
+    color: white;
+}
+
+.cat li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.cat li.active a {
+    background-color: white;
+    color: black;
+}
+
+/* <---------- E-N-D ----------> */
+
+/* WELCOME SECTION */
+
+.fixed {
+    height: 400px;
+}
+
+.fixed h1 {
+    position: relative;
+    top: 15%;
+    text-align: center;
+    font-size: 30px;
+    margin: 0 10PX;
+    color: #fff;
+}
+
+.fixed p {
+    position: relative;
+    top: 25%;
+    text-align: center;
+    font-size: 12px;
+    color: #F5F5F5;
+    width: 90%;
+    margin: 0 auto;
+    opacity: 0.7;
+}
+
+
+/* ARTICLE SECTION */
+
+.swhite {
+    height: auto;
+    position: relative;
+}
+
+.swhite h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+#list div {
+    float: initial;
+}
+
+#list {
+    position: relative;
+    margin: 10px;
+}
+
+#list li {
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    float: initial;
+}
+
+#list h6 {
+    font-size: 20px;
+}
+
+#list img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#list p {
+    font-size: 16px;
+    line-height: 25px;
+}
+
+/* CONTACT SECTION */
+
+.contact {
+    height: 120px;
+}
+
+.contact h4 {
+    padding-top: 25px;
+    font-size: 22px;
+}
+
+.contact p {
+    padding-top: 8px;
+    font-size: 15px;
+}
+
+}
